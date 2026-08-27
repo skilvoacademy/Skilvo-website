@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKILVO — Skills That Help You Evolve | Practical Computer Skills Training</title>
+<meta name="description" content="SKILVO offers structured, hands-on computer skills training for students, professionals, schools, colleges, coaching classes and training institutes — currently including Microsoft Excel and Tally Prime with GST.">
+<meta name="robots" content="index, follow">
+<!-- Canonical URL: uncomment and fill in once SKILVO has a permanent domain.
+     Not needed while hosted on GitHub Pages or any temporary URL. -->
+<!-- <link rel="canonical" href="https://YOUR-DOMAIN-HERE/"> -->
+
+<!-- Open Graph -->
+<meta property="og:site_name" content="SKILVO">
+<meta property="og:title" content="SKILVO — Practical Computer Skills Training">
+<meta property="og:description" content="Practical, hands-on computer skills training for students, professionals and educational institutions — currently including Microsoft Excel and Tally Prime with GST.">
+<meta property="og:type" content="website">
+<!-- og:url: uncomment and fill in once SKILVO has a permanent domain. -->
+<!-- <meta property="og:url" content="https://YOUR-DOMAIN-HERE/"> -->
+<meta property="og:image" content="assets/images/logo-transparent.png">
+<meta property="og:locale" content="en_IN">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SKILVO — Practical Computer Skills Training">
+<meta name="twitter:description" content="Practical, hands-on computer skills training for students, professionals and educational institutions — currently including Microsoft Excel and Tally Prime with GST.">
+<meta name="twitter:image" content="assets/images/logo-transparent.png">
+
+<link rel="icon" href="assets/images/logo-transparent.png">
+<link rel="apple-touch-icon" href="assets/images/logo-transparent.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Loader: animated SKILVO logo -->
+<div class="loader" id="loader">
+  <img src="assets/images/logo-transparent.png" alt="SKILVO" class="loader-logo">
+</div>
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- NAV: internal links are buttons (not anchors) so there is never any
+     "navigating to another page" indication — they only ever scroll
+     within this same page. -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <button class="nav-brand" data-scroll="top">
+      <img src="assets/images/logo-transparent.png" alt="SKILVO logo" class="nav-logo">
+      <span class="nav-brand-group">
+        <span class="nav-brand-text">SKILVO</span>
+        <span class="nav-brand-tagline">Skills That Help You Evolve</span>
+      </span>
+    </button>
+    <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <button class="nav-link" data-scroll="about">About</button>
+      <button class="nav-link" data-scroll="courses">Courses</button>
+      <button class="nav-link" data-scroll="method">How We Teach</button>
+      <button class="nav-link" data-scroll="institutions">Institutions</button>
+      <button class="nav-link" data-scroll="certificate">Certificate</button>
+      <button class="nav-link" data-scroll="faq">FAQ</button>
+      <button class="nav-link nav-cta" data-scroll="contact">Contact Us</button>
+    </nav>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="glow glow-1"></div>
+      <div class="glow glow-2"></div>
+
+      <div class="hero-particles" aria-hidden="true">
+        <span class="particle particle-gold" style="--x:12%; --y:22%; --dur:9s; --delay:0s;"></span>
+        <span class="particle particle-sky" style="--x:88%; --y:20%; --dur:11s; --delay:1s;"></span>
+        <span class="particle particle-gold" style="--x:80%; --y:72%; --dur:10s; --delay:2s;"></span>
+        <span class="particle particle-sky" style="--x:18%; --y:80%; --dur:12s; --delay:.5s;"></span>
+        <span class="particle particle-gold" style="--x:50%; --y:8%; --dur:8s; --delay:1.6s;"></span>
+        <span class="particle particle-sky" style="--x:60%; --y:92%; --dur:13s; --delay:2.4s;"></span>
+      </div>
+
+      <div class="hero-elements" id="heroElements">
+        <span class="hero-el hero-el-icon" style="--x:8%; --y:16%; --dur:16s; --delay:0s;">
+          <svg viewBox="0 0 24 24" class="el-gold"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke-width="1.3"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18" stroke-width="1"/></svg>
+        </span>
+        <span class="hero-el hero-el-chip chip-sky" style="--x:21%; --y:64%; --dur:13s; --delay:.6s;">Ctrl+S</span>
+        <span class="hero-el hero-el-icon" style="--x:6%; --y:78%; --dur:19s; --delay:1.2s;">
+          <svg viewBox="0 0 24 24" class="el-sky"><path d="M4 20V11M11 20V4M18 20v-8" fill="none" stroke-width="1.4" stroke-linecap="round"/></svg>
+        </span>
+        <span class="hero-el hero-el-chip chip-gold" style="--x:14%; --y:42%; --dur:15s; --delay:2s;">=SUM()</span>
+
+        <span class="hero-el hero-el-icon" style="--x:88%; --y:14%; --dur:14s; --delay:.3s;">
+          <svg viewBox="0 0 24 24" class="el-sky"><path d="M8 9 4 12l4 3M16 9l4 3-4 3M14 6l-4 12" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="hero-el hero-el-chip chip-sky" style="--x:92%; --y:38%; --dur:17s; --delay:1.5s;">Tab</span>
+        <span class="hero-el hero-el-icon" style="--x:85%; --y:66%; --dur:20s; --delay:.8s;">
+          <svg viewBox="0 0 24 24" class="el-gold"><circle cx="12" cy="12" r="3" fill="none" stroke-width="1.3"/><path d="M19.4 13a7.9 7.9 0 0 0 0-2l2-1.4-2-3.4-2.3.6a8 8 0 0 0-1.7-1L15 3h-4l-.4 2.4a8 8 0 0 0-1.7 1l-2.3-.6-2 3.4L6.6 11a7.9 7.9 0 0 0 0 2l-2 1.4 2 3.4 2.3-.6a8 8 0 0 0 1.7 1L11 21h4l.4-2.4a8 8 0 0 0 1.7-1l2.3.6 2-3.4Z" fill="none" stroke-width="1.1" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="hero-el hero-el-chip chip-gold" style="--x:78%; --y:86%; --dur:12s; --delay:1.8s;">GST</span>
+
+        <span class="hero-el hero-el-icon" style="--x:48%; --y:10%; --dur:18s; --delay:1s;">
+          <svg viewBox="0 0 24 24" class="el-gold"><path d="M6 2h9l5 5v15H6Z" fill="none" stroke-width="1.3" stroke-linejoin="round"/><path d="M15 2v5h5" stroke-width="1"/></svg>
+        </span>
+        <span class="hero-el hero-el-chip chip-sky" style="--x:52%; --y:90%; --dur:16s; --delay:2.4s;">Ctrl+C</span>
+        <span class="hero-el hero-el-icon" style="--x:40%; --y:82%; --dur:21s; --delay:.5s;">
+          <svg viewBox="0 0 24 24" class="el-sky"><path d="m6 8 11 6-4.6 1.4L11 20 6 8Z" fill="none" stroke-width="1.3" stroke-linejoin="round"/></svg>
+        </span>
+
+        <span class="hero-el hero-el-icon" style="--x:94%; --y:80%; --dur:17s; --delay:2.2s;">
+          <svg viewBox="0 0 24 24" class="el-gold"><rect x="2" y="4" width="20" height="13" rx="1.5" fill="none" stroke-width="1.3"/><path d="M8 21h8M12 17v4" stroke-width="1.3" stroke-linecap="round"/></svg>
+        </span>
+        <span class="hero-el hero-el-chip chip-gold" style="--x:4%; --y:52%; --dur:14s; --delay:.9s;">Ctrl+Z</span>
+        <span class="hero-el hero-el-icon" style="--x:64%; --y:22%; --dur:15s; --delay:1.4s;">
+          <svg viewBox="0 0 24 24" class="el-sky"><ellipse cx="12" cy="6" rx="8" ry="3" fill="none" stroke-width="1.3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6" stroke-width="1.3"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3" stroke-width="1.3"/></svg>
+        </span>
+        <span class="hero-el hero-el-chip chip-sky" style="--x:70%; --y:52%; --dur:18s; --delay:2.6s;">F2</span>
+      </div>
+    </div>
+
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="eyebrow reveal-up" style="--d:0">Practical Computer Learning</p>
+        <h1 class="hero-title reveal-up" style="--d:1">
+          Build Practical Computer Skills <em>That Stay With You.</em>
+        </h1>
+        <p class="hero-sub reveal-up" style="--d:2">
+          Learning becomes more meaningful when it is understood, practised and applied. SKILVO
+          focuses on practical computer learning through structured lessons, guided practice and
+          real-world exercises, helping learners build skills they can use with confidence. Whether
+          you're a student, a beginner, a working professional or an educational institution, the
+          goal is to make learning clear, practical and worthwhile.
+        </p>
+        <div class="hero-actions reveal-up" style="--d:3">
+          <button class="btn btn-primary magnetic" data-scroll="courses"><span>Explore Courses</span></button>
+          <button class="btn btn-ghost magnetic" data-scroll="about"><span>About SKILVO</span></button>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal-up" style="--d:2">
+        <div class="laptop-stage" id="laptopStage">
+          <div class="laptop" id="laptop">
+            <div class="laptop-screen">
+              <div class="laptop-cam"></div>
+              <div class="slideshow" id="slideshow">
+
+                <div class="slide active" data-app="excel">
+                  <img src="assets/images/laptop-excel-essentials.jpg" alt="Microsoft Excel Essentials course preview" class="slide-img">
+                  <span class="slide-caption">Microsoft Excel Essentials</span>
+                </div>
+
+                <div class="slide" data-app="advexcel">
+                  <img src="assets/images/laptop-excel-advanced.jpg" alt="Advanced Microsoft Excel course preview" class="slide-img">
+                  <span class="slide-caption">Advanced Excel</span>
+                </div>
+
+                <div class="slide" data-app="tally">
+                  <img src="assets/images/laptop-tally-essentials.jpg" alt="Tally Prime with GST Essentials course preview" class="slide-img">
+                  <span class="slide-caption">Tally Prime with GST Essentials</span>
+                </div>
+
+                <div class="slide" data-app="tallypro">
+                  <img src="assets/images/laptop-tally-professional.jpg" alt="Tally Prime with GST Professional course preview" class="slide-img">
+                  <span class="slide-caption">Tally Prime with GST Professional</span>
+                </div>
+
+              </div>
+            </div>
+            <div class="laptop-base"><div class="laptop-notch"></div></div>
+          </div>
+          <div class="laptop-shadow"></div>
+        </div>
+      </div>
+    </div>
+
+    <button class="scroll-cue" data-scroll="about" aria-label="Scroll to About section">
+      <span></span>
+    </button>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Microsoft Excel Essentials</span><span>•</span><span>Advanced Microsoft Excel</span><span>•</span>
+      <span>Tally Prime with GST Essentials</span><span>•</span><span>Tally Prime with GST Professional</span><span>•</span>
+      <span>Microsoft Excel Essentials</span><span>•</span><span>Advanced Microsoft Excel</span><span>•</span>
+      <span>Tally Prime with GST Essentials</span><span>•</span><span>Tally Prime with GST Professional</span><span>•</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div class="reveal">
+        <p class="eyebrow">About SKILVO</p>
+        <h2 class="section-title">Understand It Properly. Use It With Confidence.</h2>
+        <p class="section-subhead">
+          SKILVO is practical computer skills training built for real understanding — not just course completion.
+        </p>
+        <p class="section-lead">
+          Most computer courses move fast to finish a syllabus, leaving real understanding behind.
+          SKILVO takes the opposite approach — a skill isn't learned until you can actually use it.
+        </p>
+        <p class="section-lead">
+          Each lesson pairs a clear explanation with hands-on practice, so you're not just watching
+          how something works — you're doing it yourself until it feels familiar.
+        </p>
+        <p class="section-lead">
+          Some concepts are grasped quickly, while others take more practice — both are expected,
+          and lessons are paced accordingly to ensure genuine understanding rather than simply moving through content.
+        </p>
+        <p class="section-lead">
+          This currently includes Microsoft Excel and Tally Prime with GST, with additional practical
+          computer skills introduced over time.
+        </p>
+      </div>
+      <div class="about-cards reveal">
+        <div class="value-card tilt-card">
+          <span class="value-index">Mission</span>
+          <p>To help learners genuinely understand a computer skill — not just complete a course, but be able to apply what they've learned.</p>
+        </div>
+        <div class="value-card tilt-card">
+          <span class="value-index">Vision</span>
+          <p>A learning experience where course completion reflects real, applicable skill — not just a certificate.</p>
+        </div>
+        <div class="value-card tilt-card">
+          <span class="value-index">Learning Approach</span>
+          <p>Every topic starts with a simple explanation, then real examples, then practice — because understanding comes first, and memorising follows naturally once things make sense.</p>
+        </div>
+        <div class="value-card tilt-card">
+          <span class="value-index">What Guides Us</span>
+          <p>Clear explanations, careful pacing, and practice that mirrors real-world use — a straightforward, structured approach to genuine skill-building.</p>
+        </div>
+      </div>
+      <div class="founder-note reveal">
+        <p class="eyebrow">Led By</p>
+        <h3>Soumya Lashkari, Founder</h3>
+        <p>SKILVO is led by Soumya Lashkari, who personally teaches every course, bringing hands-on training experience and direct attention to each learner's progress.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY PRACTICAL LEARNING -->
+  <section class="section section-alt" id="why">
+    <div class="container">
+      <p class="eyebrow reveal">Why Practical Learning</p>
+      <h2 class="section-title reveal">Understanding a concept and being able to use it are two different things.</h2>
+      <p class="section-lead reveal">
+        Theory helps you understand how something works. Practical learning helps you apply that
+        understanding to a real task. Both matter — SKILVO's courses are built around combining
+        the two, so learners don't just know a tool, they know how to use it.
+      </p>
+      <div class="compare-grid">
+        <div class="compare-card tilt-card reveal">
+          <span class="compare-tag compare-tag-a">Understanding the Concept</span>
+          <ul>
+            <li>Each topic is explained clearly before any hands-on work begins</li>
+            <li>Examples show how and why a feature is used</li>
+            <li>Questions are encouraged until the concept is clear</li>
+          </ul>
+        </div>
+        <div class="compare-card tilt-card reveal">
+          <span class="compare-tag compare-tag-b">Applying It in Practice</span>
+          <ul>
+            <li>Step-by-step exercises on the real software</li>
+            <li>Tasks based on situations you're likely to encounter</li>
+            <li>Repetition and feedback build accuracy over time</li>
+          </ul>
+        </div>
+      </div>
+      <div class="student-chips reveal">
+        <span>Structured Lessons</span><span>Hands-On Exercises</span><span>Step-by-Step Guidance</span><span>Beginner Friendly</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="section" id="courses">
+    <div class="container">
+      <p class="eyebrow reveal">Current Courses</p>
+      <h2 class="section-title reveal">What we teach today.</h2>
+      <p class="section-lead reveal">Four courses are currently available. Each combines guided lessons with practical, hands-on exercises.</p>
+
+      <div class="course-grid">
+
+        <article class="course-card tilt-card reveal">
+          <div class="course-card-top">
+            <span class="course-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2" fill="none" stroke-width="1.6"/><path d="M3 9h18M3 15h18M9 3v18M15 3v18" stroke-width="1.2"/></svg>
+            </span>
+            <span class="badge badge-available">Available</span>
+          </div>
+          <h3>Microsoft Excel Essentials</h3>
+          <p class="course-intro">A beginner-friendly introduction to spreadsheets, covering the tools used in everyday office and academic work.</p>
+          <ul class="course-highlights">
+            <li><strong>Best for:</strong> Students and beginners with little or no spreadsheet experience</li>
+            <li><strong>You'll study:</strong> Formulas, formatting, data entry, basic charts and everyday reporting</li>
+            <li><strong>Outcome:</strong> Comfortably create and manage spreadsheets for regular use</li>
+          </ul>
+          <div class="course-card-foot">
+            <span class="course-duration">Duration: 15 Days</span>
+            <button class="btn-course" data-scroll="contact">Ask About This Course</button>
+          </div>
+        </article>
+
+        <article class="course-card tilt-card reveal">
+          <div class="course-card-top">
+            <span class="course-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M4 20V10M11 20V4M18 20v-7" fill="none" stroke-width="1.6" stroke-linecap="round"/><rect x="2" y="2" width="20" height="20" rx="3" fill="none" stroke-width="1.2"/></svg>
+            </span>
+            <span class="badge badge-available">Available</span>
+          </div>
+          <h3>Advanced Microsoft Excel</h3>
+          <p class="course-intro">Builds on Excel basics to cover the tools used for deeper data analysis and reporting.</p>
+          <ul class="course-highlights">
+            <li><strong>Best for:</strong> Students and professionals already familiar with Excel basics</li>
+            <li><strong>You'll study:</strong> Pivot tables, advanced formulas, lookup functions, charts and dashboards</li>
+            <li><strong>Outcome:</strong> Analyze and present data confidently using Excel's advanced tools</li>
+          </ul>
+          <div class="course-card-foot">
+            <span class="course-duration">Duration: 35 Days</span>
+            <button class="btn-course" data-scroll="contact">Ask About This Course</button>
+          </div>
+        </article>
+
+        <article class="course-card tilt-card reveal">
+          <div class="course-card-top">
+            <span class="course-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M6 2h9l5 5v15H6Z" fill="none" stroke-width="1.6" stroke-linejoin="round"/><path d="M15 2v5h5M9 13h6M9 17h6" stroke-width="1.2" stroke-linecap="round"/></svg>
+            </span>
+            <span class="badge badge-available">Available</span>
+          </div>
+          <h3>Tally Prime with GST Essentials</h3>
+          <p class="course-intro">A hands-on introduction to accounting fundamentals, billing, and GST using Tally Prime.</p>
+          <ul class="course-highlights">
+            <li><strong>Best for:</strong> Commerce students and beginners starting out in accounting</li>
+            <li><strong>You'll study:</strong> Ledger entries, vouchers, invoicing and GST fundamentals</li>
+            <li><strong>Outcome:</strong> Handle basic day-to-day accounting entries in Tally Prime</li>
+          </ul>
+          <div class="course-card-foot">
+            <span class="course-duration">Duration: 25 Days</span>
+            <button class="btn-course" data-scroll="contact">Ask About This Course</button>
+          </div>
+        </article>
+
+        <article class="course-card tilt-card reveal">
+          <div class="course-card-top">
+            <span class="course-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke-width="1.6"/><path d="M12 7v5l3.5 2" fill="none" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </span>
+            <span class="badge badge-available">Available</span>
+          </div>
+          <h3>Tally Prime with GST Professional</h3>
+          <p class="course-intro">A deeper, compliance-focused course covering GST filing and inventory management on Tally Prime.</p>
+          <ul class="course-highlights">
+            <li><strong>Best for:</strong> Students and professionals aiming for accounts or finance-related roles</li>
+            <li><strong>You'll study:</strong> Advanced entries, GST return filing, inventory management and compliance practice</li>
+            <li><strong>Outcome:</strong> Manage accounting and GST-related tasks on Tally Prime with confidence</li>
+          </ul>
+          <div class="course-card-foot">
+            <span class="course-duration">Duration: 45 Days</span>
+            <button class="btn-course" data-scroll="contact">Ask About This Course</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE TEACH -->
+  <section class="section section-alt" id="method">
+    <div class="container">
+      <p class="eyebrow reveal">How We Teach</p>
+      <h2 class="section-title reveal">A learning journey, not a single lecture.</h2>
+      <p class="section-lead reveal">Every course follows the same path — from first concept to confident, independent use.</p>
+
+      <div class="journey" id="journey">
+        <div class="journey-line" aria-hidden="true"><div class="journey-line-fill" id="journeyFill"></div></div>
+
+        <div class="journey-step reveal" style="--n:1">
+          <span class="journey-dot">01</span>
+          <h3>Learn Concepts</h3>
+          <p>Each topic starts with a clear explanation of what it is and why it matters.</p>
+        </div>
+        <div class="journey-step reveal" style="--n:2">
+          <span class="journey-dot">02</span>
+          <h3>Understand with Examples</h3>
+          <p>Concepts are shown through examples, so they make sense before you try them yourself.</p>
+        </div>
+        <div class="journey-step reveal" style="--n:3">
+          <span class="journey-dot">03</span>
+          <h3>Practice Step by Step</h3>
+          <p>You work through the same steps yourself, one at a time, on the real software.</p>
+        </div>
+        <div class="journey-step reveal" style="--n:4">
+          <span class="journey-dot">04</span>
+          <h3>Complete Practical Exercises</h3>
+          <p>Exercises based on everyday tasks help you apply what you've learned.</p>
+        </div>
+        <div class="journey-step reveal" style="--n:5">
+          <span class="journey-dot">05</span>
+          <h3>Build Accuracy &amp; Confidence</h3>
+          <p>Repetition and feedback help you get comfortable working independently.</p>
+        </div>
+        <div class="journey-step reveal" style="--n:6">
+          <span class="journey-dot">06</span>
+          <h3>Continue Improving</h3>
+          <p>Learning doesn't stop at the certificate — we encourage continued practice after the course.</p>
+        </div>
+      </div>
+
+      <ul class="why-list reveal">
+        <li><strong>Practical, Hands-On Learning</strong><span>Every module includes real, tool-based exercises.</span></li>
+        <li><strong>Structured Lessons</strong><span>A clear sequence, not a scattered set of topics.</span></li>
+        <li><strong>Beginner-Friendly Pace</strong><span>Concepts are introduced from the basics, step by step.</span></li>
+        <li><strong>Understanding Before Speed</strong><span>We focus on getting it right before getting it fast.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- INSTITUTIONS -->
+  <section class="section" id="institutions">
+    <div class="container split">
+      <div class="reveal">
+        <p class="eyebrow">For Schools, Colleges, Coaching Classes &amp; Training Institutes</p>
+        <h2 class="section-title">A practical skills module that fits alongside your curriculum.</h2>
+        <p class="section-lead">SKILVO can work alongside schools, colleges, coaching classes, training institutes and other
+          educational organizations to add structured, practical computer skill training — without
+          replacing or disrupting what you already teach.</p>
+        <button class="btn btn-primary magnetic" data-scroll="contact" style="margin-top:2rem;"><span>Contact Us</span></button>
+      </div>
+      <ul class="check-list reveal">
+        <li><strong>Practical, Tool-Based Training</strong><span>Modules built around real, hands-on tasks rather than theory alone.</span></li>
+        <li><strong>Flexible Scheduling</strong><span>Sessions arranged around your institution's calendar.</span></li>
+        <li><strong>Curriculum Support</strong><span>Skill modules that complement what you already teach.</span></li>
+        <li><strong>Hands-On Learning</strong><span>Every module ends in a real, tool-based exercise.</span></li>
+        <li><strong>Course Completion Certificate</strong><span>Provided to every learner who completes a course.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- CERTIFICATE SHOWCASE -->
+  <section class="section section-alt" id="certificate">
+    <div class="container cert-grid">
+      <div class="reveal">
+        <p class="eyebrow">Certification</p>
+        <h2 class="section-title">A certificate for the skills you've completed.</h2>
+        <p class="section-lead">
+          Learners who complete a course's requirements receive a course completion certificate,
+          issued by SKILVO, naming the course completed and including a certificate ID for reference.
+        </p>
+        <ul class="cert-points">
+          <li>Certificate ID for reference</li>
+          <li>States the exact course completed</li>
+          <li>Issued on successful course completion</li>
+        </ul>
+      </div>
+      <div class="cert-tilt-wrap reveal" id="certTiltWrap">
+        <div class="cert-frame" id="certFrame">
+          <img src="assets/images/certificate-preview.jpg" alt="Sample SKILVO course completion certificate" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="section section-alt" id="faq">
+    <div class="container faq-wrap">
+      <p class="eyebrow reveal">Frequently Asked Questions</p>
+      <h2 class="section-title reveal">Straight answers.</h2>
+      <div class="accordion reveal">
+        <div class="acc-item">
+          <button class="acc-head">Who can join SKILVO courses?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Anyone interested in learning practical computer skills — students, beginners, working professionals and learners at any starting level.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Do I need prior computer knowledge?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>No. Courses are designed to be beginner-friendly, and every topic is explained from the basics.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Are practical exercises included in every course?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Yes. Each course includes hands-on exercises on the actual software, alongside the concepts being taught.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Which courses are currently available?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Microsoft Excel Essentials, Advanced Microsoft Excel, Tally Prime with GST Essentials, and Tally Prime with GST Professional.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Is there a certificate after completion?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Yes. Learners who complete a course's requirements receive a SKILVO course completion certificate with a certificate ID.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Are beginners welcome?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Yes. Several of our courses are designed specifically for learners with no prior experience.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Can schools or colleges collaborate with SKILVO?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Yes. We can work alongside your academic calendar to offer practical skill training that complements your existing curriculum.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Can coaching classes or training institutes work with SKILVO?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Yes. We're open to working with coaching classes and training institutes that want to add practical computer skills to what they already offer.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Will more courses be introduced?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Additional practical skill courses are introduced periodically to expand what SKILVO offers.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">How long does a course take to complete?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Duration varies by course. Approximate timelines are listed on each course card in the Courses section.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">Is the training conducted online or in person?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>Reach out to us directly for current details on course format and availability.</p></div>
+        </div>
+        <div class="acc-item">
+          <button class="acc-head">How can I contact SKILVO?<span class="acc-icon"></span></button>
+          <div class="acc-body"><p>By phone, email or WhatsApp — details are in the Contact section below.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="container contact-simple">
+      <p class="eyebrow reveal">Contact</p>
+      <h2 class="section-title reveal">Let's Connect.</h2>
+      <p class="section-lead reveal">Reach out directly — call, email or message us on WhatsApp. Contact details will be updated here as SKILVO grows.</p>
+
+      <div class="contact-cards reveal">
+        <a href="tel:+918718981911" class="contact-card">
+          <svg viewBox="0 0 24 24" class="cc-icon" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.9.32 1.78.6 2.63a2 2 0 0 1-.45 2.11L8.09 9.63a16 16 0 0 0 6 6l1.17-1.17a2 2 0 0 1 2.11-.45c.85.28 1.73.48 2.63.6A2 2 0 0 1 22 16.92z" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="cc-label">Phone</span>
+          <span class="cc-value">+91 87189 81911</span>
+        </a>
+        <a href="mailto:skilvoacademy@gmail.com" class="contact-card">
+          <svg viewBox="0 0 24 24" class="cc-icon" aria-hidden="true"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2Z" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M22 6 12 13 2 6" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="cc-label">Email</span>
+          <span class="cc-value">skilvoacademy@gmail.com</span>
+        </a>
+        <a href="https://wa.me/918718981911" target="_blank" rel="noopener" class="contact-card">
+          <svg viewBox="0 0 24 24" class="cc-icon" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 20l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span class="cc-label">WhatsApp</span>
+          <span class="cc-value">Message Us</span>
+        </a>
+        <a href="https://www.youtube.com/@Skilvo" target="_blank" rel="noopener" class="contact-card" id="socialCard">
+          <svg viewBox="0 0 24 24" class="cc-icon" aria-hidden="true"><path d="M22 8.5s-.2-1.6-.8-2.3c-.8-.9-1.7-.9-2.1-1C16.3 5 12 5 12 5h0s-4.3 0-7.1.2c-.4 0-1.3.1-2.1 1C2.2 6.9 2 8.5 2 8.5S1.8 10.3 1.8 12v1.9c0 1.7.2 3.5.2 3.5s.2 1.6.8 2.3c.8.9 1.9.9 2.4 1C7 20.9 12 21 12 21s4.3 0 7.1-.3c.4 0 1.3-.1 2.1-1 .6-.7.8-2.3.8-2.3s.2-1.7.2-3.5V12c0-1.7-.2-3.5-.2-3.5Z" fill="none" stroke-linejoin="round"/><path d="M10 15.2 15 12l-5-3.2Z" fill="none" stroke-linejoin="round"/></svg>
+          <span class="cc-label">Social Media</span>
+          <span class="cc-value">YouTube</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <button class="nav-brand" data-scroll="top">
+        <img src="assets/images/logo-transparent.png" alt="SKILVO logo" class="nav-logo">
+        <span class="nav-brand-group">
+          <span class="nav-brand-text">SKILVO</span>
+          <span class="nav-brand-tagline">Skills That Help You Evolve</span>
+        </span>
+      </button>
+      <p class="footer-tag">Practical computer skills, taught through structured lessons and hands-on practice.</p>
+    </div>
+    <div>
+      <h4>Explore</h4>
+      <button class="footer-link" data-scroll="about">About</button>
+      <button class="footer-link" data-scroll="method">How We Teach</button>
+      <button class="footer-link" data-scroll="institutions">For Institutions</button>
+      <button class="footer-link" data-scroll="certificate">Certificate</button>
+    </div>
+    <div>
+      <h4>Courses</h4>
+      <button class="footer-link" data-scroll="courses">Microsoft Excel Essentials</button>
+      <button class="footer-link" data-scroll="courses">Advanced Excel</button>
+      <button class="footer-link" data-scroll="courses">Tally Prime with GST Essentials</button>
+      <button class="footer-link" data-scroll="courses">Tally Prime with GST Professional</button>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <a href="mailto:skilvoacademy@gmail.com">skilvoacademy@gmail.com</a><a href="tel:+918718981911">+91 87189 81911</a><a href="https://www.youtube.com/@Skilvo" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 SKILVO. All rights reserved.</span>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <svg viewBox="0 0 24 24" class="icon-sun"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" stroke-linecap="round"/></svg>
+      <svg viewBox="0 0 24 24" class="icon-moon"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+    </button>
+  </div>
+</footer>
+
+<button class="back-to-top" id="backToTop" data-scroll="top" aria-label="Back to top">
+  <svg viewBox="0 0 24 24"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<!-- Simple floating help/contact button (reserved for future chat/help integration) -->
+<a class="help-fab" id="helpFab" href="https://wa.me/918718981911" target="_blank" rel="noopener" aria-label="Message us on WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 20l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>
