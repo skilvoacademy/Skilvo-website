@@ -149,9 +149,14 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 }
 .nav-brand{display:flex;align-items:center;gap:10px;}
 .nav-logo{width:34px;height:34px;object-fit:contain;}
+.nav-brand-group{display:flex;flex-direction:column;line-height:1.1;}
 .nav-brand-text{
   font-family:var(--font-display);font-weight:700;font-size:1.15rem;letter-spacing:0.02em;
   color:var(--text);
+}
+.nav-brand-tagline{
+  font-family:var(--font-mono);font-size:0.65rem;letter-spacing:0.08em;
+  color:var(--gold);opacity:0.75;margin-top:1px;text-transform:uppercase;
 }
 .nav-links{display:flex;align-items:center;gap:clamp(12px,1.6vw,24px);}
 .nav-links .nav-link{
@@ -405,6 +410,17 @@ body.js-reveal .reveal.in,body.js-reveal .reveal-up.in{opacity:1;transform:trans
   color:var(--accent);
 }
 .value-card p{margin-top:10px;color:var(--text-soft);}
+.founder-note{
+  grid-column:1/-1;
+  background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-m);
+  padding:26px 28px;margin-top:8px;
+  display:flex;flex-direction:column;gap:6px;
+}
+.founder-note .eyebrow{margin:0;}
+.founder-note h3{
+  font-family:var(--font-display);font-size:1.15rem;color:var(--heading);margin:0;
+}
+.founder-note p:last-child{color:var(--text-soft);margin:0;}
 
 /* Why Practical Learning — comparison (balanced framing, no "old vs new") */
 .compare-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-top:48px;}
